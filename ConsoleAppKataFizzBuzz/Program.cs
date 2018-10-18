@@ -15,8 +15,6 @@ namespace ConsoleAppKataFizzBuzz
                 int user = int.Parse(Console.ReadLine());
 
 
-
-
                 if (user > 100)
                     Console.WriteLine("number cannot be greater than 100");
                 else if (user != 0)
