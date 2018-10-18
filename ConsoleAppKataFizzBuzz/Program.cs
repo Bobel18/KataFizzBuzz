@@ -12,9 +12,19 @@ namespace ConsoleAppKataFizzBuzz
             Console.WriteLine("Entrez un chiffre de 1 à 100");
             int user = int.Parse(Console.ReadLine());
 
-           string Output = NumberConverter.Conversion(user);
+            if (user == 0)
+                Console.WriteLine("zero can't be converted");
 
-            Console.WriteLine(Output);
+            if (user > 100)
+                Console.WriteLine("number cannot be greater than 100");
+            else
+            {
+                string Output = NumberConverter.Conversion(user);
+                Console.WriteLine(Output);
+            }
+            
+
+            
             Console.ReadLine();
         }
 
