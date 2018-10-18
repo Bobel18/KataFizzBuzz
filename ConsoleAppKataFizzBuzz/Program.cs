@@ -7,27 +7,33 @@ namespace ConsoleAppKataFizzBuzz
     {
         public static void Main(string[] args)
         {
-           
-
-            Console.WriteLine("Entrez un chiffre de 1 à 100");
-            int user = int.Parse(Console.ReadLine());
-
-            if (user == 0)
-                Console.WriteLine("zero can't be converted");
-
-            if (user > 100)
-                Console.WriteLine("number cannot be greater than 100");
-            else
+            var repeat = true;
+            while (repeat)
             {
-                string Output = NumberConverter.Conversion(user);
-                Console.WriteLine(Output);
-            }
-            
 
-            
-            Console.ReadLine();
+                Console.WriteLine("Entrez un chiffre de 1 à 100");
+                int user = int.Parse(Console.ReadLine());
+
+
+
+
+                if (user > 100)
+                    Console.WriteLine("number cannot be greater than 100");
+                else if (user != 0)
+                {
+                    string Output = NumberConverter.Conversion(user);
+                    Console.WriteLine(Output);
+                }
+                else
+                {
+                    Console.WriteLine("zero can't be converted");
+                }
+
+            }
+
+            Console.Read();
         }
 
-        
+
     }
 }
