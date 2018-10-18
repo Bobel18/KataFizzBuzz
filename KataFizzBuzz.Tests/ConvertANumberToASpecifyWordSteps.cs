@@ -6,7 +6,7 @@ using TechTalk.SpecFlow;
 namespace KataFizzBuzz.Tests
 {
     [Binding]
-    public  sealed class ConvertANumberToASpecifyWordSteps
+    public  static class ConvertANumberToASpecifyWordSteps
     {
         public static string Output
         {
@@ -22,7 +22,7 @@ namespace KataFizzBuzz.Tests
 
 
         [When(@"I ask to convert a (.*)")]
-        public void WhenIAskToConvertA(int input)
+        public static void WhenIAskToConvertA(int input)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace KataFizzBuzz.Tests
         }
 
         [Then(@"The result of the conversion should be a (.*)")]
-        public void ThenTheResultOfTheConversionShouldBeFizz(string multipleOfConverted)
+        public static  void ThenTheResultOfTheConversionShouldBeFizz(string multipleOfConverted)
         {
             Assert.AreEqual(multipleOfConverted, Output);
         }
@@ -50,7 +50,7 @@ namespace KataFizzBuzz.Tests
 
 
         [Then(@"An Error indicates ""(.*)""")]
-        public void ThenAnErrorIndicates(string erreur)
+        public static void ThenAnErrorIndicates(string erreur)
         {
             Assert.AreEqual(erreur, Error);
         }
